@@ -2,9 +2,12 @@
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
 import Barra from '../components/Barra.astro';
+import { Image} from "astro:assets";
 ---
-
-<Layout title="Comparative">
+	
+<Layout title="capper cafe">
+	<body>
+		<div class="back"></div>
 	<main>
 		<div class="nav">
 			<Barra
@@ -26,59 +29,78 @@ import Barra from '../components/Barra.astro';
 		
 		</div>
 		<br> <br>	
-		<h1>Bienvenido a <span class="text-gradient">Comparative</span></h1>
+		<h1>Bienvenido a <span class="text-gradient">Capper Cafe</span></h1>
 		<p class="instructions">
-			Bienvenido a <strong>Comparative</strong>, tu herramienta esencial para comparar precios de comidas y lugares en un solo lugar. 
+			Bienvenido a <strong>Capper Cafe</strong>
+			creemos que cada taza de café cuenta una historia.
+			Ya sea que prefieras un espresso intenso, un capuchino cremoso, o una taza de café filtrado perfectamente equilibrada, aquí encontrarás la bebida perfecta para cada momento. 
+			Además, disfruta de nuestra selección de pasteles y snacks artesanales, creados para complementar tu experiencia de café.
 		</p>
 		
 		<ul role="list" class="link-card-grid">
 			<Card
 				href="https://docs.astro.build/"
-				id='lugares'
-				title="Documentation"
+			
+				title="Postres"
 				body="Learn how Astro works and explore the official API docs."
 			/>
 			<Card
 				href="https://astro.build/integrations/"
-				id='lugares'
-				title="Integrations"
+				title="Cafe caliente"
 				body="Supercharge your project with new frameworks and libraries."
 			/>
 			<Card
 				href="https://astro.build/themes/"
-				id='comida'
-				title="Themes"
+				
+				title="cafe frio"
 				body="Explore a galaxy of community-built starter themes."
 			/>
 			<Card
 				href="https://astro.build/chat/"
-				id='contacto'
+				
 				title="Community"
 				body="Come say hi to our amazing Discord community. ❤️"
 			/>
 		</ul>
 	</main>
+	</body>
 </Layout>
 
 <style>
-	main {
+
+ .back{
+	position: absolute;
+	background-image: url('/image/cafee.jpeg');
+	background-size: cover;
+	background-repeat:no-repeat;
+	background-attachment: fixed;
+	z-index: -1;
+	height: 100%;
+	width: 100%;
+
+ }
+main {
 		position: relative;
+		z-index: 1;
 		margin: auto;
-		padding: 1rem;
+		padding: 20px;
+		padding-top: 0%;
 		width: 800px;
 		max-width: calc(100% - 2rem);
-		color: white;
+		color: rgb(250, 250, 250);
 		font-size: 20px;
 		line-height: 1.6;
+		text-align: center;
 	}
 	.nav{
-		position: absolute;
-		display: flex;
-    margin-left: 16%;
+	position: absolute;
+	display: flex;
+    margin-left:auto;
+	margin-right: auto;
     gap: 38px;
     padding: 0px;
     text-decoration: none;
-    color: aliceblue;
+    color: rgb(0, 0, 0);
 	}
 	
 	
@@ -91,9 +113,7 @@ import Barra from '../components/Barra.astro';
 		margin-bottom: 1em;
 	}
 	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
+		color: rgb(221, 241, 240);
 		background-size: 400%;
 		background-position: 0%;
 	}

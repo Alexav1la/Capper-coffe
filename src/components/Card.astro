@@ -3,16 +3,16 @@ interface Props {
 	title: string;
 	body: string;
 	href: string;
-	id: string;
+	
 }
 
-const { id, href, title, body } = Astro.props;
+const {  href, title, body } = Astro.props;
 ---
 
 <li class="link-card">
 	<a href={href}>
 		<p>
-			{id}
+			
 		</p>
 		<h2>
 			{title}
