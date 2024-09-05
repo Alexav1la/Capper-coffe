@@ -2,37 +2,14 @@
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
 import Barra from '../components/Barra.astro';
-import { Image} from "astro:assets";
----
-	
-<Layout title="capper cafe">
+
+---	
+<Layout title="capper cafe"  >
 	<body>
 		<div class="back"></div>
 	<main>
 		<div class="nav">
-			<Barra
-			href="src/pages/index.astro"
-			title="Inicio"
-			/>
-			
-			<Barra 
-				href="src/pages/Cafe.astro"
-				title="Cafe"/>
-
-			<Barra 
-			href="src/pages/postres.astro"
-			title="postres"	/>
-
-			<Barra
-			href="src/pages/bebidas.astro"
-			title="bebidas"/>
-
-			<Barra 
-				href="src/pages/sandwich.astro"
-				title="sandwiches.."
-			/>
-			
-		
+			<Barra> 
 		</div>
 		<br> <br>	
 		<h1>Bienvenido a <span class="text-gradient">Capper Cafe</span></h1>
@@ -42,7 +19,6 @@ import { Image} from "astro:assets";
 			Ya sea que prefieras un espresso intenso, un capuchino cremoso, o una taza de café filtrado perfectamente equilibrada, aquí encontrarás la bebida perfecta para cada momento. 
 			Además, disfruta de nuestra selección de pasteles y snacks artesanales, creados para complementar tu experiencia de café.
 		</p>
-		
 		<ul role="list" class="link-card-grid">
 			<Card
 				href="src/pages/sandwich.astro"
@@ -64,25 +40,12 @@ import { Image} from "astro:assets";
 				title="Sandwiches y snack"
 				body="Emparedada, Baguette, croasant, sandwich..."
 			/>
-
 		</ul>
 	</main>
 	</body>
+
 </Layout>
-
 <style>
-
- .back{
-	position: absolute;
-	background-image: url('/image/cafee.jpeg');
-	background-size: cover;
-	background-repeat:no-repeat;
-	background-attachment: fixed;
-	z-index: -1;
-	height: 100%;
-	width: 100%;
-
- }
 main {
 		position: relative;
 		z-index: 1;
@@ -96,16 +59,17 @@ main {
 		line-height: 1.6;
 		text-align: center;
 	}
-	.nav{
+	.back{
 	position: absolute;
-	display: flex;
-    margin-left:auto;
-	margin-right: auto;
-    gap: 38px;
-    padding: 0px;
-    text-decoration: none;
-    color: rgb(0, 0, 0);
+	background-image: url('/image/cafee.jpeg');
+	background-size: cover;
+	background-repeat:no-repeat;
+	background-attachment: fixed;
+	z-index: -1;
+	height: 100%;
+	width: 100%;
 	}
+	
 	
 	
 	
@@ -138,6 +102,26 @@ main {
 	}
 	.instructions strong {
 		color: rgb(var(--accent-light));
+	}
+	.nav{
+	position: absolute;
+	display: flex;
+    left:8rem;
+    gap: 38px;
+    padding: 0px;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-decoration: none;
+	font-size: large;
+    color: rgb(0, 0, 0);
+	}
+
+	.nav >a{
+		color: rgb(255, 255, 255);
+		display: flex;
+		text-decoration: none;
+		margin-bottom: 10px;
+		border-radius: 4px;
+		font-size: larger;
 	}
 	.link-card-grid {
 		display: grid;
